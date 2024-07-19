@@ -15,4 +15,4 @@ jwt:
   auth:
     converter:
       resource-id : belajar-keycloak
-      principle-attribute: preferred_username;
+      principle-attribute: preferred_username
