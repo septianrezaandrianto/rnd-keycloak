@@ -1,0 +1,18 @@
+server:
+  port : 8085
+
+spring:
+  application:
+    name: belajar-keycloak
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/belajar
+          jwk-set-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/certs
+
+jwt:
+  auth:
+    converter:
+      resource-id : belajar-keycloak
+      principle-attribute: preferred_username;
